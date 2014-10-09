@@ -1,0 +1,546 @@
+/*######################################################################
+############################        Main       #########################
+########################################################################*/
+
+* {
+    margin: 0;
+    padding: 0;
+   font-family: "BrandonGrotW01-Regular", Helvetica, Arial, Verdana, sans-serif;
+}
+
+@font-face{
+font-family:"Brandon Grot W01 Thin";
+src:url("../fonts/brandon/3651c1bb-b88f-4e50-b1de-a0e93b1770e1.eot?#iefix");
+src:url("../fonts/brandon/3651c1bb-b88f-4e50-b1de-a0e93b1770e1.eot?#iefix") format("eot"),url("../fonts/brandon/9cea1d1b-5428-4461-8a01-23d44045d07e.woff") format("woff"),url("../fonts/brandon/6530183c-fc34-4eaa-934a-d2b1c03b7a5f.ttf") format("truetype"),url("../fonts/brandon/4c444e85-f761-4519-a7b1-b3839969ba2a.svg#4c444e85-f761-4519-a7b1-b3839969ba2a") format("svg");
+}
+@font-face{
+font-family:"BrandonGrotW01-ThinItal";
+src:url("../fonts/brandon/06d5b3fa-499e-4222-a77b-8450f1cfc8a9.eot?#iefix");
+src:url("../fonts/brandon/06d5b3fa-499e-4222-a77b-8450f1cfc8a9.eot?#iefix") format("eot"),url("../fonts/brandon/26d363c8-fac1-4d39-9c3f-1d379fed0718.woff") format("woff"),url("../fonts/brandon/956400f7-7af7-46f5-86c5-61c6ed4074ed.ttf") format("truetype"),url("../fonts/brandon/a3698265-6a26-4869-a04d-9f03860f97ec.svg#a3698265-6a26-4869-a04d-9f03860f97ec") format("svg");
+}
+@font-face{
+font-family:"Brandon Grot W01 Light";
+src:url("../fonts/brandon/e00ba30a-0bf3-4c76-9392-8641fa237a92.eot?#iefix");
+src:url("../fonts/brandon/e00ba30a-0bf3-4c76-9392-8641fa237a92.eot?#iefix") format("eot"),url("../fonts/brandon/9362bca5-b362-4543-a051-2129e2def911.woff") format("woff"),url("../fonts/brandon/85060878-ca6c-43cc-ac31-7edccfdca71b.ttf") format("truetype"),url("../fonts/brandon/47f089a6-c8ce-46fa-b98f-03b8c0619d8a.svg#47f089a6-c8ce-46fa-b98f-03b8c0619d8a") format("svg");
+}
+@font-face{
+font-family:"BrandonGrotW01-LightIt";
+src:url("../fonts/brandon/20322ca9-aa51-47dd-8a57-0404bcbd9dd3.eot?#iefix");
+src:url("../fonts/brandon/20322ca9-aa51-47dd-8a57-0404bcbd9dd3.eot?#iefix") format("eot"),url("../fonts/brandon/9770d10d-36ea-4eeb-a0fe-b49939adcf57.woff") format("woff"),url("../fonts/brandon/9790e9dc-efbb-451f-a081-2cbeb9bdbbda.ttf") format("truetype"),url("../fonts/brandon/a0bc5b6f-1a3f-4516-b6ed-f4857e7d1120.svg#a0bc5b6f-1a3f-4516-b6ed-f4857e7d1120") format("svg");
+}
+@font-face{
+font-family:"BrandonGrotW01-Regular";
+src:url("../fonts/brandon/49d8a110-dd06-4918-9fea-516c27058edf.eot?#iefix");
+src:url("../fonts/brandon/49d8a110-dd06-4918-9fea-516c27058edf.eot?#iefix") format("eot"),url("../fonts/brandon/6b45f9ca-22b4-48ca-962f-6ff1fa7fc196.woff") format("woff"),url("../fonts/brandon/7fdcfbf6-62ea-4d31-935f-cac99a996c73.ttf") format("truetype"),url("../fonts/brandon/80f420d4-9e57-4016-b805-01b95b2e08f3.svg#80f420d4-9e57-4016-b805-01b95b2e08f3") format("svg");
+}
+@font-face{
+font-family:"BrandonGrotW01-RegularI";
+src:url("../fonts/brandon/4cd437c8-f180-408d-8ad9-556ba652458e.eot?#iefix");
+src:url("../fonts/brandon/4cd437c8-f180-408d-8ad9-556ba652458e.eot?#iefix") format("eot"),url("../fonts/brandon/4295133c-8375-4ebf-bcde-c3fa95065198.woff") format("woff"),url("../fonts/brandon/691c886e-9c2c-494c-bfd8-4c93de90cbb1.ttf") format("truetype"),url("../fonts/brandon/9da820e7-d5a8-4857-ab6f-fe8d9fd5608a.svg#9da820e7-d5a8-4857-ab6f-fe8d9fd5608a") format("svg");
+}
+@font-face{
+font-family:"Brandon Grot W01 Medium";
+src:url("../fonts/brandon/172fdde2-f56b-433a-a6e2-ebeab9dfb588.eot?#iefix");
+src:url("../fonts/brandon/172fdde2-f56b-433a-a6e2-ebeab9dfb588.eot?#iefix") format("eot"),url("../fonts/brandon/050c2cbf-b818-4b8e-b6d2-71b70478bd9d.woff") format("woff"),url("../fonts/brandon/7da41ce3-b3fd-4fca-a85f-4f3099884c15.ttf") format("truetype"),url("../fonts/brandon/37c88f3d-9532-4547-9e11-7cca7f66048c.svg#37c88f3d-9532-4547-9e11-7cca7f66048c") format("svg");
+}
+@font-face{
+font-family:"BrandonGrotW01-MediumIt";
+src:url("../fonts/brandon/a9bc6b22-ae4f-4362-8c42-8c08d88d0c49.eot?#iefix");
+src:url("../fonts/brandon/a9bc6b22-ae4f-4362-8c42-8c08d88d0c49.eot?#iefix") format("eot"),url("../fonts/brandon/e1d8495c-af3a-4668-b375-d1af6ecfd0d9.woff") format("woff"),url("../fonts/brandon/f78c1335-875d-4a16-b98c-0632ddd933e9.ttf") format("truetype"),url("../fonts/brandon/36bf8d33-bd2e-45f2-a9bc-1a8e7d81abf5.svg#36bf8d33-bd2e-45f2-a9bc-1a8e7d81abf5") format("svg");
+}
+@font-face{
+font-family:"Brandon Grot W01 Bold";
+src:url("../fonts/brandon/c12a6d37-72c1-408b-9ca9-32946956c57f.eot?#iefix");
+src:url("../fonts/brandon/c12a6d37-72c1-408b-9ca9-32946956c57f.eot?#iefix") format("eot"),url("../fonts/brandon/4f2d0548-c7dc-459b-a2e0-e86656a10ded.woff") format("woff"),url("../fonts/brandon/dc21d9e5-516f-4e7e-9a84-7be79a44c2dd.ttf") format("truetype"),url("../fonts/brandon/a9bdb836-ee14-494d-8c69-5617c5720992.svg#a9bdb836-ee14-494d-8c69-5617c5720992") format("svg");
+}
+@font-face{
+font-family:"BrandonGrotW01-BoldItal";
+src:url("../fonts/brandon/319c1a01-b14e-4532-b16a-e6ec987c8a93.eot?#iefix");
+src:url("../fonts/brandon/319c1a01-b14e-4532-b16a-e6ec987c8a93.eot?#iefix") format("eot"),url("../fonts/brandon/7eb3721b-4ae1-41ab-a9be-11f90b1bde70.woff") format("woff"),url("../fonts/brandon/3c0cab4d-d2b2-4a8a-864b-dd15c38d99cb.ttf") format("truetype"),url("../fonts/brandon/3ddde7fb-2d0b-4e97-96b4-971ae8fcbf7f.svg#3ddde7fb-2d0b-4e97-96b4-971ae8fcbf7f") format("svg");
+}
+@font-face{
+font-family:"Brandon Grot W01 Black";
+src:url("../fonts/brandon/b7e10dd9-521c-43c5-a17e-0bb4a5028f6f.eot?#iefix");
+src:url("../fonts/brandon/b7e10dd9-521c-43c5-a17e-0bb4a5028f6f.eot?#iefix") format("eot"),url("../fonts/brandon/f74a4823-b1ad-4887-9f8e-b02719f2972b.woff") format("woff"),url("../fonts/brandon/bb746ead-509f-451a-b786-cbb81b93710d.ttf") format("truetype"),url("../fonts/brandon/97d12583-fcae-4cd9-92f5-003b80748877.svg#97d12583-fcae-4cd9-92f5-003b80748877") format("svg");
+}
+@font-face{
+font-family:"BrandonGrotW01-BlackIta";
+src:url("../fonts/brandon/06925d3f-0e1d-4732-8150-8dd43747d037.eot?#iefix");
+src:url("../fonts/brandon/06925d3f-0e1d-4732-8150-8dd43747d037.eot?#iefix") format("eot"),url("../fonts/brandon/f41ad4ed-a6d3-405f-b256-0621c16d29b9.woff") format("woff"),url("../fonts/brandon/c0b183f1-098c-40fa-bcc3-190eb657a947.ttf") format("truetype"),url("../fonts/brandon/00e71f37-b52c-40a7-9fb8-12ac107f02f2.svg#00e71f37-b52c-40a7-9fb8-12ac107f02f2") format("svg");
+}
+
+
+img {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+.clear {
+    clear: both;
+}
+
+.press, .test {
+    background-color: gray;
+}
+
+.wrapper {
+    background-color: white;
+    z-index: 10;
+    position: relative;
+    top: 320px;
+}
+.container {
+    
+}
+/*######################################################################
+############################     Schriften     #########################
+########################################################################*/
+
+
+h1, h2{
+    font-size: 3em;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "Brandon Grot W01 Bold";
+    margin-bottom: 40px;
+    margin-top: 50px;
+}
+
+h3 {
+    font-weight: bold;
+    text-transform: uppercase
+}
+
+p {
+    font-family: "BrandonGrotW01-Regular";
+    font-size: 1.2em;
+}
+
+p.zitat {
+    font-size: 1.6em;
+}
+
+p.center {
+    text-align: center;
+}
+
+li {
+    list-style-type: none;
+    font-size: 1.2em
+}
+
+hr {
+    border-bottom: 10px solid #000;
+    width: 60px;
+    margin: 0px auto;
+}
+
+hr.kontakt {
+    width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid white;
+  border-bottom: none;
+}
+
+
+/*######################################################################
+############################     Slider     #########################
+########################################################################*/
+
+.slider {
+    background-color: red;
+    width: 100%;
+    position: absolute;
+    top:0; 
+    position: fixed;
+}   
+
+#slides {
+    width:100%;
+   overflow:hidden;
+}
+
+.cycle-slideshow {
+    z-index: 0;
+    width:100%;
+    height: 30%;
+   overflow:hidden;
+}
+
+.cycle-slideshow img {
+    margin-top:0%;
+    text-align: center;
+}
+
+
+@media (min-width:768px) {
+    
+
+    .cycle-slideshow img {
+        margin-top:-5%;
+    }
+}
+
+@media (min-width:992px) {  
+   
+    .cycle-slideshow img {
+        margin-top:-10%;
+    }
+}
+
+@media (min-width:1200px) {  
+   
+    .cycle-slideshow img {
+        margin-top:-15%;
+    }
+}
+
+
+
+#prev, #next {
+    display: none;
+}
+
+@media (min-width:768px) {
+    #prev, #next {
+        display: block;
+        color: white;
+        font-size: 5em;
+        height: 100%;
+        width: 50%;
+        position: absolute;
+        top:0;
+    }
+}
+
+
+#prev:after {
+    font-family: "Flaticon";
+    content: "\e000";
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+    position: absolute;
+    left: 5%;
+    top: 53%;
+}
+
+#next {
+    right:0;
+    }
+
+#next:after {
+    font-family: "Flaticon";
+    content: "\e000";
+    position: absolute;
+    right: 5%;
+    top: 53%;
+}
+
+
+
+
+#prev:focus, #next:focus {
+    outline: none;
+}
+
+/*######################################################################
+############################     CONTENT     #########################
+########################################################################*/
+section {
+    padding: 80px 0;
+}
+
+#start {
+    color: #35495d;
+    padding-bottom: 50px;
+}
+
+.kontakt-background {
+    background-color: #fbfbfb;
+}
+
+.portrait {
+    padding: 0; 
+    width: 150px; 
+    height: 150px; 
+    border: 5px solid #FFF; 
+    -webkit-border-radius: 50%; 
+    -khtml-border-radius: 50%; 
+    -moz-border-radius: 50%; 
+    border-radius: 50%; 
+    margin: -200px auto 0 auto;
+    background: url(../img/PORTRAIT.jpg) no-repeat;
+    background-size: 200px auto;
+    background-position: center; 
+    background-color: #7ebfb8;
+    margin-top: -150px;
+}
+
+@media (min-width:768px) {
+    .portrait {
+        width: 200px; 
+        height: 200px;
+        background-size: 250px auto;
+        margin-top: -175px;
+    }
+}
+
+@media (min-width:992px) {  
+    .portrait {
+        width: 250px; 
+        height: 250px;
+        background-size: 300px auto;
+        margin-top: -200px;
+    }
+}
+
+
+
+#Skills {
+    color: #00545d;
+}
+
+
+footer {
+    float: left;
+    width: 100%;
+    margin: 0px auto;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+    padding-bottom: 30px;
+    background-color: #fbfbfb;
+    font-family: "BrandonGrotW01-Regular";
+}
+
+footer ul {
+list-style: none;
+    margin: 0 auto;
+}
+
+footer ul li {
+font-size: 13px;
+padding: 25px 18px 10px 18px;
+display: inline-block;
+}
+
+footer ul li a {
+color:  #000;
+text-transform: uppercase;
+font-weight: bold;
+padding-bottom: 3px;
+}
+
+footer ul li a.extern:after {
+font-family: "Flaticon";
+    content: "\e001";
+    padding-left: 3px;
+    font-size: 10px;
+    position: absolute;
+}
+
+footer ul li a:hover {
+color:  #000;
+text-decoration: none;
+border-bottom: 2px solid #000;
+}
+
+
+
+
+/*######################################################################
+############################       Footer/Header       #########################
+########################################################################*/
+nav {
+float: left;
+width: 100%;
+margin: 0 auto;
+text-align: center;
+position:fixed;
+top:0;
+z-index: 20;
+
+}
+
+
+
+.fixed {
+    background:#efefef;
+    -webkit-transition: all 0.5s ease-in;
+    -moz-transition: all 0.5s ease-in;
+    -o-transition: all 0.5s ease-in;
+    -ms-transition: all 0.5s ease-in;
+    transition: all 0.5s ease-in;
+}
+
+.fixed a {
+    color: #000;
+    -webkit-transition: all 0.5s ease-in;
+    -moz-transition: all 0.5s ease-in;
+    -o-transition: all 0.5s ease-in;
+    -ms-transition: all 0.5s ease-in;
+    transition: all 0.5s ease-in;
+}
+
+
+nav {
+    height: 70px;
+}
+
+nav ul {
+list-style: none;
+    margin: 0 auto;
+}
+
+nav ul li {
+font-size: 13px;
+padding: 25px 18px 10px 18px;
+display: inline-block;
+}
+
+nav ul li a {
+color:  white;
+text-transform: uppercase;
+font-family: "BrandonGrotW01-Regular";
+padding-bottom: 3px;
+}
+
+nav ul li a:hover {
+color:  white;
+text-decoration: none;
+border-bottom: 2px solid white;
+}
+
+nav ul li a:focus {
+outline: none;
+}
+
+li.active a {
+    background: green;
+}
+
+
+/*######################################################################
+############################       Footer/Header       #########################
+########################################################################*/   
+    
+
+input[type=text], textarea {
+    -webkit-transition: all 0.50s ease-in-out;
+    -moz-transition: all 0.50s ease-in-out;
+    -ms-transition: all 0.50s ease-in-out;
+    -o-transition: all 0.50s ease-in-out;
+    border: none;
+    background-color: #fbfbfb;
+    padding: 8px;
+    font-family: "BrandonGrotW01-Regular";
+    
+    color: #35495d;
+    font-size: 20px;
+    -moz-border-radius:2px; 
+    -webkit-border-radius:2px; 
+    -khtml-border-radius:2px;
+    border-radius:2px; 
+    text-align: center;
+}
+
+input[type=text] {
+    width: 97%;
+    margin: 10px 10px;
+    text-transform: uppercase;
+}
+
+textarea {
+    width: 98.5%;
+    margin: 20px  10px;
+    height: 200px;
+    resize: none; 
+}
+
+
+
+input[type=checkbox] {
+	visibility: hidden;
+}
+
+.checkbox {
+        display: inline-block;
+        cursor: pointer;
+        font-size: 13px; margin-right:10px; line-height:18px;
+        font-family: "BrandonGrotW01-Regular";
+    text-transform: uppercase;
+        margin: 10px  auto;
+        text-align: center;
+}
+input[type=checkbox] {
+        display:none; 
+}
+.checkbox:before {
+    content: "";
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin-right: 30px;
+    vertical-align:middle;
+    background-color: #FFF;
+    color: #f3f3f3;
+    text-align: center;
+    -moz-border-radius:2px; 
+    -webkit-border-radius:2px; 
+    -khtml-border-radius:2px;
+    border-radius:2px; 
+    border: 1px solid #cccccc;
+}
+input[type=checkbox]:checked + .checkbox:before {
+        content: "\2713";
+        color: black;
+        font-size: 15px;
+}
+
+input[type=submit] {
+    padding: 10px 50px;
+    background-color:#b9dcdc;
+    -moz-border-radius:4px; 
+    -webkit-border-radius:4px; 
+    -khtml-border-radius:4px;
+    border-radius:4px;
+    border: none;
+    color: white;
+    text-transform: uppercase;
+    font-family: "Brandon Grot W01 Bold";
+    -webkit-transition: all 0.50s ease-in-out;
+    -moz-transition: all 0.50s ease-in-out;
+    -ms-transition: all 0.50s ease-in-out;
+    -o-transition: all 0.50s ease-in-out;
+    margin: 0 auto;
+    display: block;
+}
+
+
+input[type=submit]:hover {
+    background-color: gray;
+}
+
+input[placeholder], [placeholder], *[placeholder] {
+   -webkit-transition: all 0.50s ease-in-out;
+    -moz-transition: all 0.50s ease-in-out;
+    -ms-transition: all 0.50s ease-in-out;
+    -o-transition: all 0.50s ease-in-out;
+}
+
+*[placeholder]:focus {
+   color: #35495d;
+}
+
+
+
+
+
+
